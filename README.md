@@ -11,10 +11,12 @@ docker run -v $(pwd)/videos:/app/videos \
            bird-detection-workflow
 ```
 
-## Running directly via Python in venv
+## Running Python script directly in venv
+
+To run the `bird_counter` application by executing Python scripts directly, follow these steps:
 
 ```bash
-python3 -m venv venv
+python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python extract_frames_from_video.py && python detect_birds_in_frames.py && python csv_to_sqlite.py && python plot_bird_detections.py
